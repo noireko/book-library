@@ -6,13 +6,13 @@
 }
 
 main {
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgb(114, 41, 41);
 
 }
 
 .sect-titulo {
-    height: 30%;
+    min-height: 200px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -25,4 +25,40 @@ main {
 
 .sect-cuerpo {
     height: 70%;
+}
+
+.sect-books {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.sect-books div {
+    height: 300px;
+    width: 250px;
+    border-left: 10px solid rgb(105, 27, 27);
+    background-color: rgb(143, 37, 37);
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.sect-books div h3 {
+    max-width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.sect-books span {
+    margin: 5px 0;
+}
+
+.leido {
+    font-style: italic;
+    font-weight: bold;
 }
