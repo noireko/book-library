@@ -4,18 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="css/style.css"></script>
+    <title>Library</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <main>
-        <input type="text" id="inputTitle" placeholder="Título">
-        <input type="text" id="inputAuthor" placeholder="Autor">
-        <input type="number" id="inputYear" placeholder="Año">
-        <input type="number" id="inputPages" placeholder="Páginas">
-        <input type="checkbox" id="inputRead">Leído?
-        <button id="agregar">Agregar persona</button>
+        <div class="sect-titulo">
+            <h1>
+                My Library
+            </h1>
+        </div>
+        <div class="sect-cuerpo">
+            <table>
+                <input type="text" id="inputTitle" placeholder="Título" required>
+                <input type="text" id="inputAuthor" placeholder="Autor" required>
+                <input type="number" id="inputYear" placeholder="Año" required>
+                <input type="number" id="inputPages" placeholder="Páginas" required>
+                <input type="checkbox" id="inputRead">Leído?
+                <button id="agregar">Agregar persona</button>
+            </table>
+        </div>
     </main>
     <script src="js/js.js"></script>
 </body>
