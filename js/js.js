@@ -26,7 +26,7 @@ submitBtn.addEventListener("click", () => {
     const year = inputYear.value;
     const pages = inputPages.value;
     const read = inputRead.value;
-    
+
     const newBook = new Book(title, author, year, pages, read);
 
     myLibrary.push(newBook);
