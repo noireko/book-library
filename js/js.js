@@ -33,9 +33,30 @@ submitBtn.addEventListener("click", () => {
 
     console.log(myLibrary);
 
+    showBook();
+
     inputTitle.value = "";
     inputAuthor.value = "";
     inputYear.value = "";
     inputPages.value = "";
     inputRead.value = "";
 })
+
+function showBook() {
+  const contenedor = document.getElementById("sect-books");
+
+  for (let i = 0; i < myLibrary.length; i++) {
+    const libro = myLibrary[i];
+
+    const div = document.createElement("div");
+    div.classList.add("libro");
+
+    div.innerHTML = `
+      <h3>${libro.title}</h3>
+      <span>${libro.author}</span>
+      <span>${libro.pages} pages</span>
+    `;
+
+    contenedor.appendChild(div);
+  }
+}
