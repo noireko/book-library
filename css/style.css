@@ -34,9 +34,10 @@ main {
     align-items: center;
     gap: 100px;
     flex-wrap: wrap;
+    color: white;
 }
 
-.sect-books div {
+.sect-books > div {
     height: 300px;
     width: 250px;
     border-left: 10px solid rgb(105, 27, 27);
@@ -155,4 +156,11 @@ form[hidden] {
 .sect-btn button:hover {
     
     background-color: rgb(112, 28, 28);
+}
+
+.delete-btn {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
 }
