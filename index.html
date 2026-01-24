@@ -21,16 +21,31 @@
         </div>
         <div class="sect-cuerpo">
             <div class="sect-books" id="sect-books">
-                
             </div>
-            <table>
-                <input type="text" id="inputTitle" placeholder="Título" required>
-                <input type="text" id="inputAuthor" placeholder="Autor" required>
-                <input type="number" id="inputYear" placeholder="Año" required>
-                <input type="number" id="inputPages" placeholder="Páginas" required>
-                <input type="checkbox" id="inputRead">Leído?
-                <button id="agregar">Agregar persona</button>
-            </table>
+            <form>
+                <fieldset>
+                    <label for="title">Title</label>
+                    <input type="text" id="inputTitle" required>
+                </fieldset>
+                <fieldset>
+                    <label>Author</label>
+                    <input type="text" id="inputAuthor" required>
+                </fieldset>
+                <fieldset>
+                    <label>Year</label>
+                    <input type="number" id="inputYear" required>
+                </fieldset>
+                <fieldset>
+                    <label>Páginas</label>
+                    <input type="number" id="inputPages" required>
+                </fieldset>
+                <fieldset>
+                    <input type="checkbox" id="inputRead">Leído?
+                </fieldset>
+                <div>
+                    <button id="agregar">Agregar persona</button>
+                </div>
+            </form>
         </div>
     </main>
     <script src="js/js.js"></script>
