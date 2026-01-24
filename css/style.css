@@ -66,19 +66,28 @@ main {
 
 form {
     margin: auto;
-    display:flex;
+    display: none;
     flex-direction: column;
     gap:20px;
     width: 400px;
     padding: 30px;
     background-color: white;
     border-radius: 15px;
+    color: rgb(143, 37, 37);
+    font-weight: bold;
 }
 
 fieldset input {
     border-radius: 5px;
     height: 30px;
-    padding-left: 10px
+    padding-left: 10px;
+    border: 2px solid rgb(143, 37, 37);
+}
+
+input:focus {
+  outline: none;
+  border-color: rgb(143, 37, 37);
+  box-shadow: 0 0 0 2px rgba(143, 37, 37, 0.2);
 }
 
 fieldset {
@@ -94,6 +103,22 @@ fieldset:last-of-type {
     gap:1rem
 }
 
+fieldset:last-of-type input {
+    flex-direction: row;
+    align-items: center;
+    gap:1rem
+}
+
+form div:last-of-type {
+    display:flex;
+    justify-content: center;
+}
+
 form button {
-    padding: 15px 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(143, 37, 37);
+    color: white;
 }
