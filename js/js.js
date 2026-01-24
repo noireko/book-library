@@ -9,6 +9,9 @@ const inputYear = document.getElementById("inputYear");
 const inputPages = document.getElementById("inputPages");
 const inputRead = document.getElementById("inputRead");
 const submitBtn = document.getElementById("agregar");
+const dltBtn = document.getElementById("dltBtn");
+const addBtn = document.getElementById("addBtn");
+const form = document.getElementById("form")
 
 const myLibrary = [];
 
@@ -73,3 +76,7 @@ function showBook() {
         contenedor.appendChild(div);
     }
 }
+
+addBtn.addEventListener("click", () => {
+
+})
