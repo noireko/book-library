@@ -52,6 +52,7 @@ main {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
 }
 
 .sect-books span {
@@ -61,4 +62,38 @@ main {
 .leido {
     font-style: italic;
     font-weight: bold;
+}
+
+form {
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    width: 400px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+fieldset input {
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 10px
+}
+
+fieldset {
+    display:flex;
+    flex-direction: column;
+    border: none;
+    gap: 0.5rem;
+}
+
+fieldset:last-of-type {
+    flex-direction: row;
+    align-items: center;
+    gap:1rem
+}
+
+form button {
+    padding: 15px 20px;
 }
