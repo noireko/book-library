@@ -67,7 +67,8 @@ function showBook() {
       <span>${libro.year}</span>
       <span>${libro.pages} pages</span>
       <span class="leido">${libro.read ? "Leído" : "No leído"}</span>
-      <button class="delete-btn" hidden>✖</button>
+      <div><button class="delete-btn" hidden>✖</button></div>
+      
     `;
 
     contenedor.appendChild(div);
