@@ -11,7 +11,7 @@ const inputRead = document.getElementById("inputRead");
 const submitBtn = document.getElementById("agregar");
 const dltBtn = document.getElementById("dltBtn");
 const addBtn = document.getElementById("addBtn");
-const form = document.getElementById("form")
+const form = document.getElementById("form");
 
 const myLibrary = [];
 
@@ -78,5 +78,5 @@ function showBook() {
 }
 
 addBtn.addEventListener("click", () => {
-
+    form.toggleAttribute("hidden");
 })
