@@ -14,13 +14,14 @@ main {
 .sect-titulo {
     min-height: 200px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding-left: 50px
 }
 
 .sect-titulo h1 {
     text-align: center;
-    color: rgb(236, 85, 39)
+    color: rgb(236, 85, 39);
+    font-size: 36px;
 }
 
 .sect-cuerpo {
@@ -66,7 +67,7 @@ main {
 
 form {
     margin: auto;
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 20px;
     width: 400px;
@@ -136,6 +137,14 @@ form button {
     border: none;
     background-color: rgb(143, 37, 37);
     color: white;
+}
+
+form {
+  transition: opacity 0.3s ease;
+}
+
+form[hidden] {
+  opacity: 0;
 }
 
 .sect-btn button:hover {
