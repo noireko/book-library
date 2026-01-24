@@ -13,14 +13,14 @@ main {
 
 .sect-titulo {
     min-height: 200px;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sect-titulo h1{
+.sect-titulo h1 {
     text-align: center;
-    color:rgb(236, 85, 39)
+    color: rgb(236, 85, 39)
 }
 
 .sect-cuerpo {
@@ -28,7 +28,7 @@ main {
 }
 
 .sect-books {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 100px;
@@ -41,7 +41,7 @@ main {
     border-left: 10px solid rgb(105, 27, 27);
     background-color: rgb(143, 37, 37);
     border-radius: 10px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     padding: 15px;
 }
@@ -68,7 +68,7 @@ form {
     margin: auto;
     display: none;
     flex-direction: column;
-    gap:20px;
+    gap: 20px;
     width: 400px;
     padding: 30px;
     background-color: white;
@@ -85,13 +85,13 @@ fieldset input {
 }
 
 input:focus {
-  outline: none;
-  border-color: rgb(143, 37, 37);
-  box-shadow: 0 0 0 2px rgba(143, 37, 37, 0.2);
+    outline: none;
+    border-color: rgb(143, 37, 37);
+    box-shadow: 0 0 0 2px rgba(143, 37, 37, 0.2);
 }
 
 fieldset {
-    display:flex;
+    display: flex;
     flex-direction: column;
     border: none;
     gap: 0.5rem;
@@ -100,17 +100,17 @@ fieldset {
 fieldset:last-of-type {
     flex-direction: row;
     align-items: center;
-    gap:1rem
+    gap: 1rem
 }
 
 fieldset:last-of-type input {
     flex-direction: row;
     align-items: center;
-    gap:1rem
+    gap: 1rem
 }
 
 form div:last-of-type {
-    display:flex;
+    display: flex;
     justify-content: center;
 }
 
@@ -121,4 +121,24 @@ form button {
     border: none;
     background-color: rgb(143, 37, 37);
     color: white;
+}
+
+.sect-btn {
+    display: flex;
+    justify-content: center;
+    gap: 30px
+}
+
+.sect-btn button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(143, 37, 37);
+    color: white;
+}
+
+.sect-btn button:hover {
+    
+    background-color: rgb(112, 28, 28);
 }
