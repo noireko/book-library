@@ -25,7 +25,7 @@ submitBtn.addEventListener("click", () => {
     const author = inputAuthor.value;
     const year = inputYear.value;
     const pages = inputPages.value;
-    const read = inputRead.value;
+    const read = inputRead.checked;
 
     const newBook = new Book(title, author, year, pages, read);
 
@@ -33,30 +33,43 @@ submitBtn.addEventListener("click", () => {
 
     console.log(myLibrary);
 
-    showBook();
-
     inputTitle.value = "";
     inputAuthor.value = "";
     inputYear.value = "";
     inputPages.value = "";
-    inputRead.value = "";
+    inputRead.value = false;
+
+    showBook();
 })
 
 function showBook() {
-  const contenedor = document.getElementById("sect-books");
+    const contenedor = document.getElementById("sect-books");
 
-  for (let i = 0; i < myLibrary.length; i++) {
-    const libro = myLibrary[i];
+    contenedor.innerHTML = "";
 
-    const div = document.createElement("div");
-    div.classList.add("libro");
+    for (let i = 0; i < myLibrary.length; i++) {
+        const libro = myLibrary[i];
 
-    div.innerHTML = `
+        const div = document.createElement("div");
+        div.classList.add("libro");
+
+        div.innerHTML = `
       <h3>${libro.title}</h3>
       <span>${libro.author}</span>
+      <span>${libro.year}</span>
       <span>${libro.pages} pages</span>
     `;
 
-    contenedor.appendChild(div);
-  }
+        if (libro.read) {
+            div.innerHTML += `
+    <span class="leido">Leído</span>
+  `;
+        } else {
+            div.innerHTML += `
+    <span class="leido">No leído</span>
+  `;
+        }
+
+        contenedor.appendChild(div);
+    }
 }
