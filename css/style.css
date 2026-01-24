@@ -132,6 +132,7 @@ form button {
     display: flex;
     gap: 30px;
     padding-left: 50px;
+    margin-bottom: 30px;
 }
 
 .sect-btn button {
@@ -148,7 +149,7 @@ form {
 }
 
 form[hidden] {
-  opacity: 0;
+  display: none;
 }
 
 .sect-btn button:hover {
