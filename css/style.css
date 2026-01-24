@@ -66,6 +66,10 @@ main {
 }
 
 form {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -126,8 +130,8 @@ form button {
 
 .sect-btn {
     display: flex;
-    justify-content: center;
-    gap: 30px
+    gap: 30px;
+    padding-left: 50px;
 }
 
 .sect-btn button {
