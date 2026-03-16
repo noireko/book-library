@@ -17,6 +17,16 @@ const sectBooks = document.getElementById("sect-books")
 const myLibrary = [];
 let deleteMode = false;
 
+class Book {
+  constructor(title, author, year, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
+    this.pages = pages;
+    this.read = read;
+  }
+}
+
 function Book(title, author, year, pages, read) {
     this.id = crypto.randomUUID();
     this.title = title;
