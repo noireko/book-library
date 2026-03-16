@@ -14,7 +14,6 @@ const addBtn = document.getElementById("addBtn");
 const form = document.getElementById("form");
 const sectBooks = document.getElementById("sect-books")
 
-const myLibrary = [];
 let deleteMode = false;
 
 class Book {
@@ -28,13 +27,19 @@ class Book {
   }
 }
 
-function Book(title, author, year, pages, read) {
-    this.id = crypto.randomUUID();
-    this.title = title;
-    this.author = author;
-    this.year = year;
-    this.pages = pages;
-    this.read = read;
+class Library {
+  constructor() {
+    this.books = [];
+  }
+
+  addBook(book) {
+    this.books.push(book);
+  }
+
+  removeBook(id) {
+    const index = this.books.findIndex(book => book.id === id);
+    this.books.splice(index, 1);
+  }
 }
 
 submitBtn.addEventListener("click", () => {
