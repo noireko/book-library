@@ -24,6 +24,7 @@ class Book {
     this.year = year;
     this.pages = pages;
     this.read = read;
+    this.id = crypto.randomUUID();
   }
 }
 
