@@ -39,31 +39,34 @@ class Library {
   removeBook(id) {
     const index = this.books.findIndex(book => book.id === id);
     this.books.splice(index, 1);
+
   }
 }
 
+const myLibrary = new Library();
+
 submitBtn.addEventListener("click", () => {
-    const title = inputTitle.value;
-    const author = inputAuthor.value;
-    const year = inputYear.value;
-    const pages = inputPages.value;
-    const read = inputRead.checked;
+  const title = inputTitle.value;
+  const author = inputAuthor.value;
+  const year = inputYear.value;
+  const pages = inputPages.value;
+  const read = inputRead.checked;
 
-    const newBook = new Book(title, author, year, pages, read);
+  const newBook = new Book(title, author, year, pages, read);
 
-    myLibrary.push(newBook);
+  myLibrary.addBook(newBook);
 
-    console.log(myLibrary);
+  console.log(myLibrary);
 
-    inputTitle.value = "";
-    inputAuthor.value = "";
-    inputYear.value = "";
-    inputPages.value = "";
-    inputRead.checked = false;
+  inputTitle.value = "";
+  inputAuthor.value = "";
+  inputYear.value = "";
+  inputPages.value = "";
+  inputRead.checked = false;
 
-    showBook();
-    
-    form.toggleAttribute("hidden");
+  showBook();
+
+  form.toggleAttribute("hidden");
 })
 
 function showBook() {
@@ -93,7 +96,7 @@ function showBook() {
 
 
 addBtn.addEventListener("click", () => {
-    form.toggleAttribute("hidden");
+  form.toggleAttribute("hidden");
 })
 
 dltBtn.addEventListener("click", () => {
@@ -114,8 +117,7 @@ sectBooks.addEventListener("click", (e) => {
   const bookDiv = e.target.closest(".libro");
   const bookId = bookDiv.dataset.id;
 
-  const index = myLibrary.findIndex(book => book.id === bookId);
-  myLibrary.splice(index, 1);
+  myLibrary.removeBook(bookId);
 
   showBook();
 });
