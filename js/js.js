@@ -73,12 +73,12 @@ function showBook() {
   const contenedor = document.getElementById("sect-books");
   contenedor.innerHTML = "";
 
-  for (let i = 0; i < myLibrary.length; i++) {
-    const libro = myLibrary[i];
+  for (let i = 0; i < myLibrary.books.length; i++) {
+    const libro = myLibrary.books[i];
 
     const div = document.createElement("div");
     div.classList.add("libro");
-    div.dataset.id = libro.id; // 🔑 CLAVE
+    div.dataset.id = libro.id;
 
     div.innerHTML = `
       <h3>${libro.title}</h3>
@@ -87,7 +87,6 @@ function showBook() {
       <span>${libro.pages} pages</span>
       <span class="leido">${libro.read ? "Leído" : "No leído"}</span>
       <div><button class="delete-btn" hidden>✖</button></div>
-      
     `;
 
     contenedor.appendChild(div);
